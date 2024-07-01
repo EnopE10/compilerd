@@ -17,6 +17,19 @@ const testCases = [
             error: 0,
         },
     },
+    //hello world testcase in javaScript
+    {
+        name: 'javascript : hello world',
+        reqObject: {
+            language: 'javascript',
+            script:'console.log("Hello, World!")\n' 
+        },
+        expectedResponse: {
+            val: 'hello world',
+            status: 200,
+            error: 0,
+        },
+    },
     {
         name: 'cpp : print stdin',
         reqObject: {
@@ -291,6 +304,62 @@ const testCases = [
         reqObject: {
             language: 'promptv2',
             prompt: 'The question is what is 2 plus 2. The answer given is 4.',
+        },
+        expectedResponse: {
+            val: {},
+            status: 200,
+            error: 0,
+        },
+    },
+    //hello world test case in typescript
+    {
+        name: 'Typescript : Hello world',
+        reqObject: {
+            language: 'Typescript',
+            prompt: 'type Params = {name: string;}'+
+            'function greet(data: Params) {'+
+        	'console.log("Hello world")',
+        },
+        expectedResponse: {
+            val: {},
+            status: 200,
+            error: 0,
+        },
+    },
+    //hello world test case in csharp
+    {
+        name: 'Csharp : Hello world',
+        reqObject: {
+            language: 'Csharp',
+            prompt: 'using System;'+
+            'namespace Hello World {'+
+        	'class Hello{' +
+        	'static void Main(string[] args) {' +
+        	'Console.WriteLine("Hello World in C#");}}',
+        	
+        },
+        expectedResponse: {
+            val: {},
+            status: 200,
+            error: 0,
+        },
+    },
+    //pallindrome test case in csharp to ckeck number validity
+    {
+        name: 'Csharp : Pallindrome',
+        reqObject: {
+            language: 'Csharp',
+            prompt: 'using System;'+
+            '  public class PalindromeExample{'+
+        	' public static void Main(string[] args) {' +
+        	' int n=797,r,sum=0,temp;  ' +
+        	'while(n>0) {' +
+        	'  sum=(sum*10)+r;      ' +
+        	' n=n/10; }' +
+        	'  if(temp==sum) Console.Write("Number is Palindrome."); ' +
+        	'  else   Console.Write("Number is not Palindrome");',
+        	
+        	
         },
         expectedResponse: {
             val: {},
