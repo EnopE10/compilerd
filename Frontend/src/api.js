@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { LANGUAGE_VERSIONS } from "./constants";
-import { testCases } from "../../../tests/data/testJson";
+
 
 const API = axios.create({
   baseURL: "https://emkc.org/api/v2/piston",
